@@ -1,0 +1,185 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+
+\title{\textbf{The UAT Lagrangian:\\Derivation of the Quantum Braking Action and the\\Closure of the Causal Coherence Parameters}}
+\author{Miguel Ángel Percudani\\
+\texttt{miguel\_percudani@yahoo.com.ar}\\
+Puan, Buenos Aires, Argentina}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present the Lagrangian formulation of the Unified Applicable Time (UAT) framework, a scalar‑tensor theory in which a causal field \(\phi\) couples non‑minimally to gravity and governs the local flow of time. The action \(S_{\mathrm{UAT}}\) contains three parameters: the vacuum scale \(\eta\), the non‑minimal coupling \(\xi\), and the self‑coupling \(\lambda\). We show that these parameters are not free but are rigidly fixed by three independent constraints derived from the UAT/UCP architecture: (i) \(\eta \equiv \kappa_{\mathrm{crit}} = 4.978\), the Ivancho causal limit; (ii) \(\phi_* = 0.07\,\eta\), the 7\% thermal calibration margin at the epoch of recombination; and (iii) the quantum braking factor \(k_{\mathrm{early}} = 0.967\), which determines \(\xi\). From these we obtain \(\xi = -0.2810\) and \(\lambda \approx 3.08\times 10^{-112}\) in Planck units. The resulting effective Friedmann equation reproduces the UAT expansion history and embeds the Hartman saturation and the causal coherence limit within a single fundamental action. This work completes the formal mathematical foundation of the UAT/UCP programme.
+\end{abstract}
+
+\section{Introduction}
+The Unified Applicable Time (UAT) framework~\cite{UAT} and its corollary, the Unified Causal Principle (UCP)~\cite{UPC}, propose that the macroscopic flow of time is not a primitive geometric coordinate but an emergent phenomenon regulated by a fundamental causal coherence constant \(\kappa_{\mathrm{crit}} \approx 4.978\). In the cosmological setting, this regulation manifests as a ``quantum brake'' —the parameter \(k_{\mathrm{early}} \approx 0.967\)— that modifies the early‑universe expansion rate and resolves the Hubble tension~\cite{UAT_Hubble}.
+
+Previous phenomenological analyses have demonstrated that UAT is not ruled out by current SNe, CMB and BAO data; indeed, it performs at least as well as \(\Lambda\)CDM~\cite{UAT_Lab}. What has been missing is a rigorous derivation of the UAT dynamics from an action principle. This article fills that gap.
+
+We construct a scalar‑tensor action \(S_{\mathrm{UAT}}\) (Sec.~2), derive the equations of motion in a FLRW background (Sec.~3), and show how the three independent constraints of the UAT/UCP architecture completely determine the three Lagrangian parameters (Sec.~4). The resulting effective Friedmann equation (Sec.~5) reproduces the UAT expansion law, and the connection with the ``Thermodynamic Overdrive'' limit is established (Sec.~6). Implications and open questions are discussed in Sec.~7.
+
+\section{The UAT Action}
+We postulate that the ``applicable time'' is encoded in a real scalar field \(\phi\) whose value controls the local rate of temporal flow. The action, in natural units (\(\hbar = c = 1\)) but with gravitational coupling explicitly retained, reads
+
+\begin{equation}
+S_{\mathrm{UAT}} = \int d^4x \sqrt{-g} \left[ \frac{M_{\mathrm{Pl}}^2}{2} R - \frac{1}{2} g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi - V(\phi) - \frac{\xi}{2} R \phi^2 + \mathcal{L}_m \right],
+\label{eq:action}
+\end{equation}
+
+where \(M_{\mathrm{Pl}} = (8\pi G)^{-1/2}\) is the reduced Planck mass, \(R\) the Ricci scalar, \(V(\phi)\) the self‑interaction potential, \(\xi\) a dimensionless non‑minimal coupling, and \(\mathcal{L}_m\) the standard matter Lagrangian.
+
+The potential is chosen to have a double‑well form that ensures stability in the late universe while allowing a field displacement in the early universe:
+
+\begin{equation}
+V(\phi) = \frac{\lambda}{4} (\phi^2 - \eta^2)^2 + V_0,
+\label{eq:potential}
+\end{equation}
+
+where \(\eta\) sets the vacuum scale of the field and \(V_0\) is tuned to match the observed cosmological constant today (\(V_0 \approx 2.5\times 10^{-122}\,M_{\mathrm{Pl}}^4\)).
+
+The non‑minimal term \(-\frac{\xi}{2} R \phi^2\) is the core of the quantum brake mechanism. Because the Ricci scalar in FLRW geometry is \(R = -6(\dot H + 2H^2)\), and in a matter‑radiation universe \(R\) is positive (dominated by \(\rho_m\)), a negative \(\xi\) generates a repulsive scalar pressure that counteracts gravitational collapse when the density exceeds a critical threshold.
+
+\section{Equations of Motion in FLRW}
+For a spatially flat FLRW metric, the field equation for \(\phi\) and the Friedmann equation are obtained by varying the action \eqref{eq:action}:
+
+\begin{align}
+\ddot \phi + 3H \dot \phi + \frac{dV}{d\phi} + \xi R \phi &= 0, \label{eq:KG}\\
+3M_{\mathrm{Pl}}^2 H^2 &= \rho_m + \rho_r + \rho_\phi, \label{eq:Friedmann}
+\end{align}
+
+where the effective energy density of the scalar field is
+
+\begin{equation}
+\rho_\phi = \frac{1}{2} \dot \phi^2 + V(\phi) + 3\xi H^2 \phi^2 + 6\xi H \phi \dot \phi.
+\label{eq:rho_phi}
+\end{equation}
+
+In the ``slow‑roll'' regime of the early universe, \(\dot\phi\) is small, and the dominant contribution is \(\rho_\phi \approx 3\xi H^2 \phi^2\). Substituting into \eqref{eq:Friedmann} yields
+
+\begin{equation}
+H^2 = \frac{1}{3M_{\mathrm{Pl}}^2} \frac{\rho_m + \rho_r}{1 - \xi \phi^2}.
+\label{eq:H2_mod}
+\end{equation}
+
+Comparing with the phenomenological UAT expansion law
+
+\begin{equation}
+H^2_{\mathrm{UAT}} = \frac{1}{3M_{\mathrm{Pl}}^2} \, k_{\mathrm{early}} (\rho_m + \rho_r),
+\label{eq:UAT_pheno}
+\end{equation}
+
+we obtain the fundamental relation
+
+\begin{equation}
+k_{\mathrm{early}} = \frac{1}{1 - \xi \phi_*^2},
+\label{eq:k_early_relation}
+\end{equation}
+
+where \(\phi_*\) is the value of the scalar field at the epoch of recombination.
+
+\section{Closure of the Parameters}
+The UAT/UCP framework provides three independent, non‑adjustable constraints that determine \(\eta\), \(\xi\), and \(\lambda\) uniquely.
+
+\subsection{Vacuum scale from the causal limit}
+The maximum excursion of the field before causal coherence is lost is set by the Ivancho constant:
+
+\begin{equation}
+\boxed{\eta \equiv \kappa_{\mathrm{crit}} = 4.978\quad (\text{in Planck‑reduced units})}.
+\label{eq:eta}
+\end{equation}
+
+\subsection{Thermal calibration of the field at recombination}
+The 7\% thermal noise margin that permeates the UAT calibration fixes the residual field at recombination:
+
+\begin{equation}
+\phi_* = 0.07 \, \eta = 0.07 \times 4.978 = 0.34846.
+\label{eq:phi_star}
+\end{equation}
+
+\subsection{Non‑minimal coupling from the quantum brake}
+Inserting \(\phi_*\) and the measured value \(k_{\mathrm{early}} = 0.967\) into \eqref{eq:k_early_relation} gives
+
+\begin{equation}
+\xi = \frac{1 - 1/k_{\mathrm{early}}}{\phi_*^2} = \frac{-0.0341}{0.1214} \approx -0.2810.
+\label{eq:xi}
+\end{equation}
+
+The negative sign confirms that the scalar field exerts a repulsive pressure opposing gravitational collapse —the essence of the quantum brake.
+
+\subsection{Self‑coupling from the recombination density}
+The effective potential \(V_{\mathrm{ef}}(\phi) = V(\phi) + \frac{\xi}{2} R \phi^2\) has a minimum at \(\phi=\eta\) as long as its second derivative is positive. The onset of instability (``Thermodynamic Overdrive'') occurs when \(V_{\mathrm{ef}}''(\eta) = 0\), i.e. when
+
+\begin{equation}
+2\lambda \eta^2 + \xi R_c = 0.
+\label{eq:inflection}
+\end{equation}
+
+In the FLRW background, \(R = 8\pi G (\rho_m - 3p_m) + \ldots\); for non‑relativistic matter at recombination, \(R_c \approx 8\pi G\,\rho_{\mathrm{rec}}\). Identifying \(\rho_{\mathrm{rec}}\) with the energy density of the photon‑baryon plasma at \(z \approx 1100\), namely \(\rho_{\mathrm{rec}} \approx (1.1\;\mathrm{eV})^4\), and using the conversion \(1\;\mathrm{eV} = 1.96\times 10^{-28}\,M_{\mathrm{Pl}}\), we find
+
+\begin{equation}
+\rho_{\mathrm{rec}} \approx (2.16\times 10^{-28})^4\,M_{\mathrm{Pl}}^4 \approx 2.17\times 10^{-111}\,M_{\mathrm{Pl}}^4.
+\end{equation}
+
+Solving \eqref{eq:inflection} for \(\lambda\) yields
+
+\begin{equation}
+\boxed{\lambda = -\frac{\xi R_c}{2\eta^2} = \frac{|\xi| \cdot 8\pi \rho_{\mathrm{rec}}}{2\eta^2} \approx 3.08 \times 10^{-112}}.
+\label{eq:lambda}
+\end{equation}
+
+The extreme smallness of \(\lambda\) is a natural consequence of the enormous hierarchy between the recombination scale (\(\sim 1\;\mathrm{eV}\)) and the Planck scale (\(\sim 10^{28}\;\mathrm{eV}\)).
+
+\section{The Effective UAT Friedmann Equation}
+With the parameters fixed, the effective Friedmann equation in the early universe follows from \eqref{eq:H2_mod} and \eqref{eq:k_early_relation}:
+
+\begin{equation}
+H^2 = \frac{1}{3M_{\mathrm{Pl}}^2} \, k_{\mathrm{early}} (\rho_m + \rho_r), \qquad k_{\mathrm{early}} = 0.967.
+\label{eq:H2_final}
+\end{equation}
+
+This is precisely the phenomenological law that has been tested against Pantheon+, CMB and BAO data~\cite{UAT_Lab}. The present derivation shows that it emerges from a well‑defined action principle.
+
+\section{Thermodynamic Overdrive and the Causal Limit}
+The instability condition \(V_{\mathrm{ef}}''(\eta) = 0\) marks the threshold where the scalar field can no longer stabilise the local causal structure. In the language of the UCP, this corresponds to the ``Ivancho limit'' \(\kappa/k = 4.978\). Using the asymptotic relation
+
+\begin{equation}
+\frac{\kappa}{k} = \frac{1}{1 - R/R_c},
+\label{eq:kappa_ratio}
+\end{equation}
+
+we find that the observed stability of the late universe (\(R \ll R_c\)) implies \(\kappa/k \approx 1\), while the approach to recombination (\(R \to R_c\)) drives \(\kappa/k \to \infty\). The specific value \(\kappa/k = 4.5\) (onset of Overdrive) is obtained for \(R = R_c (1 - 1/4.5) \approx 0.78\,R_c\), i.e. when the curvature is 78\% of the critical value.
+
+\section{Discussion and Outlook}
+The action \eqref{eq:action} together with the numerical parameters derived in Sec.~4 constitutes the first complete Lagrangian formulation of the UAT/UCP framework. Its salient features are:
+
+\begin{itemize}
+    \item \textbf{No free parameters:} The three constants \(\eta\), \(\xi\), and \(\lambda\) are entirely fixed by the UAT axioms \((k_{\mathrm{early}}, \kappa_{\mathrm{crit}})\) and the thermal calibration margin (7\%).
+    \item \textbf{Natural hierarchy:} The tiny self‑coupling \(\lambda \sim 10^{-112}\) emerges automatically from the ratio of the recombination density to the Planck density.
+    \item \textbf{Consistency with observations:} The effective Friedmann equation \eqref{eq:H2_final} reproduces the UAT expansion history that has been shown to be compatible with current cosmological data.
+    \item \textbf{Embedding of the Hartman effect:} The same scalar field \(\phi\) that controls the cosmic expansion also governs local temporal fluctuations, providing a unified picture of quantum tunneling time and cosmological dynamics~\cite{Hartman_UAT}.
+\end{itemize}
+
+Future work should address the numerical solution of the coupled Klein‑Gordon–Friedmann system to track the exact evolution of \(\phi(z)\) and its observable signatures on the CMB power spectrum, as well as the search for experimental consequences of the causal coherence limit in table‑top quantum optics.
+
+\section{Conclusion}
+We have derived the Lagrangian of the Unified Applicable Time framework and demonstrated that its three parameters are rigidly determined by the fundamental UAT/UCP constants. The resulting action anchors the quantum brake, the thermodynamic overdrive threshold, and the causal coherence limit within a single scalar‑tensor theory. This work completes the formal mathematical foundation of the UAT/UCP programme and opens the door to further observational and experimental tests.
+
+\begin{thebibliography}{9}
+\bibitem{UAT} M.~A.~Percudani, \emph{Universal Applied Time (UAT) Framework}, Zenodo, 2024. DOI: \texttt{10.5281/zenodo.17729221}
+\bibitem{UPC} M.~A.~Percudani, \emph{Unified Causal Principle (UCP)}, Zenodo, 2024. DOI: \texttt{10.5281/zenodo.17718670}
+\bibitem{UAT_Hubble} M.~A.~Percudani, \emph{Resolution of the Hubble Tension through the UAT Framework}, Zenodo, 2025.
+\bibitem{UAT_Lab} M.~A.~Percudani, \emph{UAT Laboratory Report: Exploratory MCMC Analyses}, Zenodo, 2025.
+\bibitem{Hartman_UAT} M.~A.~Percudani, \emph{The Hartman Effect and the Causal Coherence Limit}, Zenodo, 2025.
+\bibitem{antifreq} M.~A.~Percudani, \emph{Experimental Framework for Atemporal Antifrequency Effects}, Zenodo, 2025. DOI: \texttt{10.5281/zenodo.18809178}
+\bibitem{feynman} R.~P.~Feynman and A.~R.~Hibbs, \emph{Quantum Mechanics and Path Integrals}, McGraw-Hill (1965).
+\end{thebibliography}
+
+\end{document}
